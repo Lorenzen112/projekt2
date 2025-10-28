@@ -1,0 +1,180 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #F5F2ED;
+  color: #222222;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 700;
+  color: #143642;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #143642;
+  color: #FFFFFF;
+  padding: 0.5em;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* === HEADER === */
+header {
+  background-color: #143642;
+  color: #FFFFFF;
+  padding: 0.8em 0;
+}
+
+.menu {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.8em;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+nav a:focus,
+nav a:hover {
+  color: #AED6FF;
+  text-decoration: underline;
+}
+
+/* === BANNER === */
+.banner {
+  text-align: center;
+  background-color: #AED6FF;
+  color: #143642;
+  padding: 2.5em 1em;
+}
+
+.banner h1 {
+  font-size: 3em;
+  margin: 0.2em 0;
+}
+
+.banner p {
+  font-size: 1.3em;
+}
+
+/* === HVEM ER VI === */
+.om {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  width: 80%;
+  margin: 2.5em auto;
+  padding: 2em;
+  gap: 2em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.om-tekst {
+  max-width: 420px;
+}
+
+.om-billede {
+  width: 320px;
+  border-radius: 10px;
+  border: 3px solid #143642;
+}
+
+/* === 5 GODE RÅD === */
+.ord {
+  background-color: #AED6FF;
+  color: #143642;
+  width: 80%;
+  margin: 2em auto;
+  padding: 2em;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.ord-indhold {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ord ol {
+  text-align: left;
+  font-size: 1.1em;
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.ord-billede {
+  width: 200px;
+  border-radius: 50%;
+  border: 3px solid #143642;
+  margin-top: 1em;
+}
+
+/* === BOKSE === */
+.bokse {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 2.5em auto;
+}
+
+.boks {
+  background-color: #FFFFFF;
+  padding: 1em;
+  border-radius: 12px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.boks-billede {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.8em;
+  border: 2px solid #F5F2ED;
+}
+
+.boks:focus-within,
+.card:hover {
+  outline: 3px solid #143642;
+  outline-offset: 3px;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #143642;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+}
