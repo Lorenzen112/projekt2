@@ -244,12 +244,46 @@ header {
 
 
 /* OM OS + KONTAKT */
-.om, .kontakt {
+.kontakt {
   padding: 40px 10%;
   text-align: center;
 }
 
-.om-billede {
+.om {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 40px 10%;
+  align-items: stretch;
+}
+
+.om-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: nowrap;        
+}
+
+
+.om-item img {
+  flex: 0 0 48%;
+  max-width: 600px;
+  width: 100%;
+  height: 400px;           
+  object-fit: cover;      
+  object-position: center; 
+  border-radius: 10px;
+  margin-top: 0;
+}
+
+.om-item .om-text {
+  flex: 1 1 55%;
+  max-width: 55%;
+  text-align: left;
+}
+
+.om-banner-billede {
   width: 150%;
   max-width: 100%;
   height: 500px;
@@ -258,22 +292,42 @@ header {
   margin-bottom: 0.5rem;
 }
 
-.om-billede2 {
-  width: 100%;
-  height: 500px;
-  border-radius: 10px;
-  margin-top: 2rem;
+.om-item img,
+.om-billede {
+  flex: 0 0 45%;          
+  max-width: 45%;
+  width: 45%;
+  height: 400px;
   object-fit: cover;
-  object-position: center 10%;
+  object-position: center;
+  border-radius: 10px;
+  margin: 0;
 }
 
-.om-billede3 {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  margin-top: 2rem;
-  object-fit: cover;
-  object-position: center 10%;
+.om-item img.om-billede2,
+img.om-billede2 {
+  object-position: 50% 100%;
+}
+
+.om-item img.om-billede3,
+img.om-billede3 {
+  object-position: 50% 60%; 
+}
+
+.om-item.reverse {
+  flex-direction: row-reverse; 
+}
+
+.om-tekst h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+}
+
+.om-tekst p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
 }
 
 .kontakt-banner-billede{
@@ -423,4 +477,45 @@ header {
   .boks {
     width: 90%;
   }
+
+  .om-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .om-item .om-text {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .om {
+    padding: 20px 6%;
+    gap: 1.25rem;
+  }
+
+  .om-item img,
+  .om-billede,
+  .om-billede2,
+  .om-billede3 {
+    flex: 0 0 auto;       
+    width: 100%;
+    max-width: 100%;
+    height: 360px;        
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+   .om-item,
+   .om-item.reverse {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .om-billede2,
+.om-billede3 {
+  object-position: center bottom; 
+}
 }
