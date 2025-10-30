@@ -3,76 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mental sundhed og Velvære</title>
-
+  <title>Forside</title>
+  </title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- SKIP LINK (WCAG) -->
-  <a href="#main" class="skip-link">Spring til indhold</a>
+  <a href="#main" class="skip-link">hop til indhold</a>
 
-  <!-- BANNER -->
-  <header role="banner">
+  <header>
     <div class="menu">
       <img src="img/logo.PNG" alt="LorenZen logo" class="logo">
-      <nav role="navigation" aria-label="Hovedmenu">
+      <nav aria-label="Hovedmenu">
         <ul>
-          <li><a href="#">Find ro</a></li>
-          <li><a href="#">Om os</a></li>
-          <li><a href="#">Kontakt</a></li>
-          <li><a href="#">Login</a></li>
+          <li><a href="index.html" aria-current="page">Forside</a></li>
+          <li><a href="om-os.html">Om os</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main" role="main">
-    <!-- BANNER -->
-    <section class="banner" aria-labelledby="banner-titel">
-      <h1 id="banner-titel">LorenZen</h1>
-      <p>Styrk dit mentale velvære - hver dag!</p>
-    </section>
-
-    <!-- HVEM ER VI -->
-    <section class="om" aria-labelledby="om-titel">
-      <div class="om-tekst">
-        <h2 id="om-titel">Hvem er vi?</h2>
-        <p>Hos os finder du inspiration, ro og støtte til at styrke din mentale sundhed i hverdagen.</p>
-        <p>Vi tror på, at små ændringer i din dagligdag kan skabe store resultater for krop og sind.</p>
-        <p>Vores formål er at hjælpe dig med at finde ro og balance i hverdagen.</p>
-        <p><em>- Frederik Lorenzen, CEO</em></p>
-      </div>
-      <img src="img/bro.jpeg" alt="bro mod havet" class="om-billede">
-    </section>
-
-    <!-- 5 GODE RÅD -->
-    <section class="ord" aria-labelledby="ord-titel">
-      <h2 id="ord-titel">5 GODE RÅD</h2>
-      <div class="ord-indhold">
-        <ol>
-          <li>Dyrk regelmæssig motion</li>
-          <li>Planlæg din tid</li>
-          <li>Styrk din krop indefra</li>
-          <li>Tag pauser og sov nok</li>
-          <li>Gør plads til ro og afslapning</li>
-        </ol>
-        <img src="img/logo.PNG" alt="træ top" class="ord-billede">
+  <main id="main">
+    <section class="banner">
+    <img src="img/bro.jpeg" alt="bro ved havet" class="banner-billede">
+    <img src="img/logo.PNG" alt="stor LorenZen logo" class="logo-billede">
+      <div class="banner-tekst">
+        <h1 class="stroked-header">LorenZen</h1>
+        <p>Styrk dit mentale velvære - hver dag!</p>
       </div>
     </section>
 
-    <!-- TRE BOKSE -->
-    <section class="bokse" aria-labelledby="bokse-titel">
-      <h2 id="bokse-titel">Udforsk mere</h2>
+    <section class="raad" aria-labelledby="raad-titel">
+      <h2 id="raad-titel">5 GODE RÅD</h2>
+      <ol>
+        <li>Dyrk regelmæssig motion</li>
+        <li>Planlæg din tid</li>
+        <li>Styrk din krop indefra</li>
+        <li>Tag pauser og sov nok</li>
+        <li>Gør plads til ro og afslapning</li>
+      </ol>
+      <img src="img/logo.PNG" alt="stor LorenZen logo" class="raad-billede">
+    </section>
+
+    <section class="bokse">
       <div class="boks">
         <img src="img/hånd.jpg" alt="Hånd og vand" class="boks-billede">
         <h3>Citater</h3>
         <p>Find dine favoritcitater om ro og balance.</p>
       </div>
       <div class="boks">
-        <img src="img/hjerner.jpg" alt="små nødder der symboliserer hjerner" class="boks-billede">
+        <img src="img/hjerner.jpg" alt="Nødder der illustrerer hjerner" class="boks-billede">
         <h3>Lær om hjernens funktion</h3>
-        <p>Forstå hvordan din hjerne påvirker dit velvære.</p>
+        <p>Forstå de 3 hjerne dele, Neo-cortex, limbiske system og reptilhjernen.</p>
       </div>
       <div class="boks">
         <img src="img/træ.jpg" alt="Træ på mark" class="boks-billede">
@@ -82,9 +66,14 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer role="contentinfo">
-    <p>LorenZen.dk</p>
+  <footer>
+    <p>&copy; 2025 LorenZen.dk - Mental sundhed og velvære</p>
+    <nav aria-label="Footer links">
+      <ul>
+        <li><a href="om-os.html">Om os</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
   </footer>
 
 </body>
