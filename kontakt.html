@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt os – LorenZen</title>
+  <title>Kontakt os - LorenZen</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,6 +13,13 @@
   <header>
     <div class="menu">
       <img src="img/logo.png" alt="LorenZen logo" class="logo">
+
+      <button class="hamburger" aria-controls="main-nav" aria-expanded="false" aria-label="Åben menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
       <nav aria-label="Hovedmenu">
         <ul>
           <li><a href="index.html">Forside</a></li>
@@ -24,10 +31,21 @@
   </header>
 
   <main id="main">
+
+  <section>
+      <img src="img/sky.jpg" alt="kontakt os" class="kontakt-banner-billede">
+      <div class="banner-tekst2">
+        <h1 class="stroked-header2">Kontakt os</h1>
+      </div>
+        </section>
+
     <section class="kontakt">
-      <h1>Kontakt os</h1>
+    
       <form action="#" method="post" aria-label="Kontaktformular">
-        <label for="navn">Navn</label>
+        <label for="fornavn">Fornavn</label>
+        <input type="text" id="navn" name="navn" required>
+
+        <label for="efternavn">Efternavn</label>
         <input type="text" id="navn" name="navn" required>
 
         <label for="email">E-mail</label>
