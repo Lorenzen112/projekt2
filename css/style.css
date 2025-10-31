@@ -67,7 +67,14 @@ a {
 a:focus,
 a:hover {
   text-decoration: underline;
-  outline: 1px solid #fff;
+  outline: 1px solid #143642;
+  outline-offset: 3px;
+}
+
+main a:focus,
+main a:hover {
+  text-decoration: underline;
+  outline: 1px solid #aed6ff;
   outline-offset: 3px;
 }
 
@@ -353,6 +360,8 @@ header {
 .kontakt {
   padding: 40px 10%;
   text-align: center;
+  position: relative;
+  z-index: 3;
 }
 
 .om {
@@ -498,6 +507,36 @@ img.om-billede3 {
 .kontakt button:hover,
 .kontakt button:focus {
   background-color: #1e5164;
+}
+
+.kontakt p {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.kontakt h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.kontakt a.email-link,
+.kontakt a[href^="mailto:"] {
+  color: #143642;            
+  display: inline-block;
+  z-index: 4;
+}
+
+.kontakt .email-text {
+  pointer-events: none; 
+}
+
+.phone-link {
+  display: none;           
+  color: inherit;
+  text-decoration: none;
+}
+.phone-text {
+  display: inline;         
 }
 
 /* FOOTER */
@@ -740,5 +779,16 @@ footer a {
 .raad-row img.raad-billede2 {
   display: none;
 }
+
+.phone-link {
+    display: inline;
+  }
+  .phone-text {
+    display: none;
+  }
+
+  .kontakt h2 {
+    font-size: 2.5rem;
+  }
 
 }
