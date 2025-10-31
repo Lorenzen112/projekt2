@@ -29,6 +29,28 @@ h1{
       1px -1px 0 #fff,
      -1px  1px 0 #fff,
       1px  1px 0 #fff;
+  position: static;
+transform: none;
+margin: 0;
+font-size: 3.2rem; 
+}
+
+.banner-tekst p {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.banner-tekst {
+position: absolute;
+top: 65%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #fff;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.4rem;
+z-index: 2;
 }
 
 h2, h3 {
@@ -45,8 +67,14 @@ a {
 a:focus,
 a:hover {
   text-decoration: underline;
-  outline: 2px solid #AED6FF;
+  outline: 1px solid #fff;
   outline-offset: 3px;
+}
+
+.logo-link:hover {
+  outline: none;
+  outline-offset: 0;
+  box-shadow: none;
 }
 
 /* SKIP LINK */
@@ -71,44 +99,61 @@ a:hover {
 /* HEADER & MENU */
 header {
   background-color: #143642;
-  padding: 10px 5%;
+  padding: 35px 5%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .menu {
-  position: relative; 
+  position: static;
   display: flex;
   align-items: center;
   gap: 2rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1024px;
   margin: 0 auto;
   justify-content: center;
+}
+
+.menu-toggle {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  opacity: 0;         
+  z-index: 110;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
 }
 
 .hamburger {
   display: none; 
   position: absolute;
-  right: 5%;     
+  right: 5%;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 100;  
+  z-index: 100;
   background: transparent;
   border: none;
   padding: 8px;
   width: 44px;
   height: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   align-items: center;
   justify-content: center;
-  flex-direction: column; 
-  gap: 6px;               
   cursor: pointer;
 }
 
 .hamburger span {
-  display: block;
+  display: none;
   width: 28px;
   height: 3px;
   background: #AED6FF;
@@ -116,8 +161,23 @@ header {
 }
 
 .logo {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
   height: 70px;
   width: auto;
+  z-index: 10;
+}
+
+.logo-link {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70px;
+  width: auto;
+  z-index: 10;
 }
 
 .menu nav ul {
@@ -139,19 +199,18 @@ header {
 
 /* BANNER */
 .banner {
-  position: relative;
-  text-align: center;
-  color: #fff;
-  height: 1200px;
-  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center 10%;
+  margin-bottom: 2rem;
 }
 
 .logo-billede {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   width: 300px;
-  opacity: 0.8;
   transform: translate(-50%, -50%);
 }
 
@@ -166,9 +225,11 @@ header {
 
 .banner-tekst {
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #fff;
+  gap: 0.4rem;
 }
 
 .banner h1 {
@@ -178,31 +239,71 @@ header {
 
 .banner p {
   font-size: 2rem;
+  margin-top: -10px;
 }
 
 /* 5 GODE RÅD */
 .raad {
-  text-align: center;
-  padding: 60px 20px;
+  position: relative;
+  padding: 40px 20px 120px;
   background-color: #aed6ff;
+  text-align: center;
+}
+
+.raad-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.raad-row .raad-billede1,
+.raad-row .raad-billede2 {
+  flex: 0 0 140px; 
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+}
+
+.raad-text {
+  flex: 1 1 60%;
+  text-align: left;
+  font-size: 1.6rem;
 }
 
 .raad h2 {
   color: #143642;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .raad ol {
   display: inline-block;
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
-.raad-billede {
+.raad-billede1 {
   width: 100px;
   opacity: 0.8;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.raad-billede2 {
+  width: 100px;
+  opacity: 0.8;
+  position: absolute;
+  top: 20%;
+  right: 10%;
 }
 
 /* TRE BOKSE */
@@ -240,8 +341,13 @@ header {
 .boks h3 {
   color: #143642;
   margin-top: 0.5rem;
+  font-size: 1.5rem;
 }
 
+.boks p {
+  font-size: 1.1rem;
+  color: #143642;
+}
 
 /* OM OS + KONTAKT */
 .kontakt {
@@ -418,16 +524,17 @@ footer a {
 /* RESPONSIV DESIGN */
 @media (max-width: 768px) {
   
-header {
-  background-color: #143642;
-  padding: 30px 5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
   .hamburger {
     display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hamburger span {
+    display: block;
   }
 
   .menu nav {
@@ -438,10 +545,14 @@ header {
     right: 0;
     background-color: #143642;
     padding: 1rem 5%;
-    z-index: 50;
+    z-index: 90;
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+  }
+
+  .menu-toggle:checked ~ nav {
+    display: block;
   }
 
   .menu.open nav {
@@ -457,12 +568,14 @@ header {
   }
 
   .logo {
-    height: 100px;
+    height: 90px;
     width: auto;
   }
 
   .banner h1 {
-    font-size: 2rem;
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: -1rem;
   }
 
   .banner-tekst2 h1 {
@@ -518,4 +631,114 @@ header {
 .om-billede3 {
   object-position: center bottom; 
 }
+
+.stroked-header { 
+  font-size: 6rem; 
+}
+
+.banner-tekst p {
+   font-size: 1.3rem;
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
+
+}
+
+ .banner-tekst {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  gap: 1rem;
+ }
+
+ .banner-billede {
+  height: 500px;
+ }
+
+ header {
+  background-color: #143642;
+  padding: 60px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.raad {
+  position: relative;
+  padding: 40px 20px 120px;
+  background-color: #aed6ff;
+  text-align: center;
+}
+
+.raad-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.raad-row .raad-billede1,
+.raad-row .raad-billede2 {
+  flex: 0 0 140px; 
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+}
+
+.raad-text {
+  flex: 1 1 60%;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.raad h2 {
+  color: #143642;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.raad ol {
+  display: inline-block;
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.raad-billede1 {
+  width: 100px;
+  opacity: 0.8;
+  position: center;
+  top: 20%;
+  
+}
+
+.raad-billede2 {
+  width: 100px;
+  opacity: 0.8;
+  position: center;
+  top: 20%;
+  
+}
+
+.raad ol li,
+  .raad-tekst ol li,
+  .raad-text ol li {
+    font-size: 1.4rem; 
+    line-height: 1.35;
+  }
+
+.raad-row img.raad-billede1,
+.raad-row img.raad-billede2 {
+  display: none;
+}
+
 }
