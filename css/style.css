@@ -14,6 +14,26 @@ body {
 }
 
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background-color: #143642;
+  color: #143642;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+
+.skip-link:focus {
+  top: 10px; 
+}
+
+
+
 h1{
   font-family: "Garamond", serif;
   font-weight: bold;
